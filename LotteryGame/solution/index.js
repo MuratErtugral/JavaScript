@@ -34,6 +34,8 @@ btn.addEventListener("click",() =>{
     let c =`${luckyNumbers[0]}-${luckyNumbers[1]}-${luckyNumbers[2]}-${luckyNumbers[3]}-${luckyNumbers[4]}-${luckyNumbers[5]} | ${luckyNumbers[6]} | ${luckyNumbers[7]}`
     
     cont[z].innerHTML=c
+    let hr = document.createElement("hr")
+    cont[z].appendChild(hr)
     luckyNumbers=[]
      
     
