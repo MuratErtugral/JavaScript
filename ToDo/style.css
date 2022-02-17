@@ -53,6 +53,7 @@ form button:hover{
     background: white;
     color: black;
     font-size: 1.5rem;
+    font-weight: 900;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,6 +62,13 @@ form button:hover{
 
 .todo li{
     flex: 1;
+}
+::placeholder{opacity: 0.5;
+    font-weight: 500;
+    font-size: 1.3rem;}
+.datem{
+    background: chartreuse;
+    padding: 0.47rem;
 }
 .trash-btn,
 .complete-btn{
@@ -123,4 +131,9 @@ select{
 .select:hover::after{
     background: white;
     color: #ff6f47;
+}
+
+
+@media (screen) {
+    
 }
