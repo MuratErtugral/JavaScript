@@ -65,15 +65,8 @@ equalsButton.addEventListener("click", () => {
 
 //? All Clear(AC) button event
 acButton.addEventListener("click", () => {
-
-    if (!previousOperand){
-        currentOperand= currentOperand.slice(0,currentOperand.length-1)
-        updateDisplay()
-        return
-    }
-    else{
         clear();
-        updateDisplay();}
+        updateDisplay();
 });
 
 //? plus-minus(+-) button event
@@ -119,11 +112,6 @@ const appendNumber = (num) => {
 //? Display the numbers and computation
 const updateDisplay = () => {
   //? if computation or number is too long, it trims
-  if(previousOperand){
-    acButton.innerHTML="AC"
-  }
-  else{acButton.innerHTML="C"}
-
   if (currentOperand.toString().length > 12) {
     currentOperand = currentOperand.toString().slice(0, 12);
   }
