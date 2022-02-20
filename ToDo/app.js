@@ -19,7 +19,7 @@ function history(){
 
 
 
-function addTodo(event){
+function addTodo(){
     //Prevent form from submitting
     event.preventDefault();
     //Todo DIV
