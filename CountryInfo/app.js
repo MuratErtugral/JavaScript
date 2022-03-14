@@ -31,6 +31,7 @@ const renderCountry = (data, type = 'country') => {
     name: { common: countryName },
     flags: { svg: flag },
   } = data;
+  console.log(data);
 
   const countryHtmlCard = `
       <img src="${flag}" class="card-img-top border border-secondary" alt="Flag" />
@@ -140,12 +141,15 @@ const viewCountry = async (countryName) => {
     renderError(error);
   }
 };
-
+console.log("test");
 const input = document.getElementById("input")
 const add = document.getElementById("search");
-add.addEventListener("click",()=>{
-  countryHtml=""
-  viewCountry(input.value)
+const country = document.getElementsByClassName("country")
+add.addEventListener("click", ()=>{
+  
+  console.log("test");
+  console.log(country.innerHTML);
+  // await viewCountry(input.value)
 })
-
+viewCountry("Turkey")
 
