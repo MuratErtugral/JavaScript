@@ -146,10 +146,10 @@ const input = document.getElementById("input")
 const add = document.getElementById("search");
 const country = document.getElementsByClassName("country")
 add.addEventListener("click", ()=>{
-  
-  console.log("test");
-  console.log(country.innerHTML);
+  viewCountry("input.value")
+  // console.log("test");
+  // console.log(country.innerHTML);
   // await viewCountry(input.value)
 })
-viewCountry("Turkey")
+
 
