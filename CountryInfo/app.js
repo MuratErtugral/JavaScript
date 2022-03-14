@@ -68,7 +68,7 @@ const renderCountry = (data, type = 'country') => {
     const main = document.querySelector('main');
     main.insertAdjacentHTML('afterbegin', countryHtml);
   } else if (type === 'neighbour') {
-    const neighbourHtml = `<div class="card col col-sm-6 col-lg-3 py-3 neighbour">${countryHtmlCard}</div>`;
+    const neighbourHtml = `<div class="card col col-6 col-sm-6 col-lg-3 py-3 neighbour">${countryHtmlCard}</div>`;
     const neighbourDiv = document.querySelectorAll('.neighbour-container');
     neighbourDiv[0].insertAdjacentHTML('beforeend', neighbourHtml);
   }
@@ -128,10 +128,10 @@ const viewCountry = async (countryName) => {
       //   const neighbour = await getNeighbour(item);
       //   renderCountry(neighbour, 'neighbour');
       // });
-      // for await (const item of data.borders) {
-      //   const neighbour = await getNeighbour(item);
-      //   renderCountry(neighbour, 'neighbour');
-      // }
+      for await (const item of data.borders) {
+        const neighbour = await getNeighbour(item);
+        renderCountry(neighbour, 'neighbour');
+      }
     } else {
       console.log('komşu yok');
       throw new Error('No Negihbour!');
