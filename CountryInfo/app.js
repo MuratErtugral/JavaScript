@@ -128,10 +128,10 @@ const viewCountry = async (countryName) => {
       //   const neighbour = await getNeighbour(item);
       //   renderCountry(neighbour, 'neighbour');
       // });
-      for await (const item of data.borders) {
-        const neighbour = await getNeighbour(item);
-        renderCountry(neighbour, 'neighbour');
-      }
+      // for await (const item of data.borders) {
+      //   const neighbour = await getNeighbour(item);
+      //   renderCountry(neighbour, 'neighbour');
+      // }
     } else {
       console.log('komşu yok');
       throw new Error('No Negihbour!');
@@ -146,7 +146,7 @@ const input = document.getElementById("input")
 const add = document.getElementById("search");
 const country = document.getElementsByClassName("country")
 add.addEventListener("click", ()=>{
-  viewCountry("input.value")
+  viewCountry(input.value)
   // console.log("test");
   // console.log(country.innerHTML);
   // await viewCountry(input.value)
