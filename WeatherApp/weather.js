@@ -58,7 +58,7 @@ const getWeatherDataFromApi = async() =>{
         
     } 
     catch (error) {
-        msg.innerText = error;
+        msg.innerText = `No region found with ${inputVal}`;
         setTimeout(()=>{
             msg.innerHTML=""
         },3000)
